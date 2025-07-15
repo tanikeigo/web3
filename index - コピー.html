@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webフォントテスト</title>
+
+  <!-- Webフォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/earlyaccess/notosansjp.css">  <!--Noto Sans JP-->
+  <link href="https://fonts.cdnfonts.com/css/menlo" rel="stylesheet">
+
+  <!-- Bootstrap CSS and JS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  
+  <!-- Bootstrapのアイコン -->
+   <!-- X のアイコンを出すためバージョン1.11.0を指定(1.10.3から変更) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <!-- font-awesomeのフォント -->
+    <!-- FBとIGのアイコンを使うため -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  
+  <!-- 自前のCSSファイル -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        
+    </header>
+
+    <main>
+        <!-- <h1>Webフォントテスト</h1>
+        <p class="webfontsample">これはMenloフォントで表示されています。Information / Pickup / Products</p>
+        <p>これはシステム標準のフォントです。Information / Pickup / Products</p> -->
+        <div id="Information">
+            <h2 class="fontmenlo-h">Information</h2>
+        </div>
+        <div id="Pickup">
+            <h2 class="fontmenlo-h">Pickup</h2>
+            
+            <!-- view more ボタン -->
+            <!-- <div class="position-relative">
+                <div class="position-absolute top-50 start-50 translate-middle">
+                    <div class="col-6">
+                        <a href="products.html" class="btn btn-flat fontmenlo"><span>view more</span></a>
+                    </div>
+                </div>
+            </div> -->
+            <a href="products.html" class="btn btn-flat text-center fontmenlo"><span>view more</span></a>
+        </div>
+        <div id="Products">
+            <h2 class="fontmenlo-h">Products</h2>
+        </div>
+        <div id="Access">
+            <h2 class="fontmenlo-h">Access</h2>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Webフォントテスト</p>
+    </footer>
+
+    <!-- スクロール検出スクリプト -->
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+        const navbarHeight = navbar.offsetHeight;
+
+        window.addEventListener('scroll', function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+            // スクロールダウン → 非表示
+            // navbar.style.top = "-80px";
+            // スクロールダウン → 高さ分だけ上に移動
+            navbar.style.top = `-${navbarHeight}px`;
+            } else {
+            // スクロールアップ → 表示
+            navbar.style.top = "0";
+            }
+
+            lastScrollTop = scrollTop;
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
