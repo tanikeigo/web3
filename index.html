@@ -94,7 +94,7 @@
         </nav>
 
         <!-- カルーセル -->
-        <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel"
+        <!-- <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel"
             data-bs-interval="2500">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -103,27 +103,24 @@
                     aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
                     aria-label="Slide 3"></button>
-                <!-- <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button> -->
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <a href="products.html">
-                        <img src="images/209761_roomdesign.png" class="d-block w-100" alt="ROOMDESIGN1">
+                        <img src="images/slider/slider-1_1920-1080.png" class="d-block w-100" alt="ROOMDESIGN1">
                     </a>
                     <div class="carousel-caption d-none d-sm-block">
                         <h4 class="bg-dark bg-gradient" style="--bs-bg-opacity: .5;">ROOMDESIGN1</h4>
-                        <!-- <p>Some representative placeholder content for the first slide.</p> -->
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="images/209927_roomdesign.png" class="d-block w-100" alt="ROOMDESIGN2">
+                    <img src="images/slider/slider-2_1920-1080.png" class="d-block w-100" alt="ROOMDESIGN2">
                     <div class="carousel-caption d-none d-sm-block">
                         <h4 class="bg-dark bg-gradient" style="--bs-bg-opacity: .5;">ROOMDESIGN2</h4>
-                        <!-- <p>Some representative placeholder content for the second slide.</p> -->
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="images/209927_roomdesign_2.png" class="d-block w-100" alt="ROOMDESIGN3">
+                    <img src="images/slider/slider-3_1920-1080.png" class="d-block w-100" alt="ROOMDESIGN3">
                     <div class="carousel-caption d-none d-sm-block">
                         <h4>ROOMDESIGN3</h4>
                     </div>
@@ -139,25 +136,34 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
+        </div> -->
+
+        <!-- ヒーロースライダー -->
+        <div class="hero">
+            <div class="slide" style="background-image: url('images/slider/slider-1_1920-1080.png');"></div>
+            <div class="slide" style="background-image: url('images/slider/slider-2_1920-1080.png');"></div>
+            <div class="slide" style="background-image: url('images/slider/slider-3_1920-1080.png');"></div>
+
+            <div class="hero-text">
+                <h1>ようこそ</h1>
+                <p>椅子の専門店</p>
+            </div>
         </div>
 
     </header>
 
     <main>
-        <!-- <h1>Webフォントテスト</h1>
-        <p class="webfontsample">これはMenloフォントで表示されています。Information / Pickup / Products</p>
-        <p>これはシステム標準のフォントです。Information / Pickup / Products</p> -->
-        <div id="Information">
+        <div id="Information" class="div-space">
             <div class="container">
                 <h2 class="fontmenlo-h">Information</h1>
                     <p class="fontmenlo">Chairsは、椅子の専門店です。<br>
                         様々な種類の椅子を取り揃えています。<br>
-                        お客様のライフスタイルに合った椅子を見つけてください。</p>
-                    <p class="fontmenlo">最新情報やイベント情報は、<a href="concept.html">Concept</a>ページをご覧ください。</p>
+                        お客様のライフスタイルに合った椅子をご提案いたします。
+                    </p>
             </div>
         </div>
 
-        <div id="Pickup">
+        <div id="Pickup" class="div-space">
             <div class="container py-4">
                 <h1 class="fontmenlo-h">Pickup</h1>
                 <div class="row g-4">
@@ -165,8 +171,11 @@
                     <div class="col-6 col-lg-3">
                         <a href="products.html">
                             <div class="card product-card">
-                                <img src="images/ProductsImg/01_armofficechair.png" class="card-img-top"
+                                <div class="zoom-img">
+                                    <img src="images/ProductsImg/01_armofficechair.png" class="card-img-top"
                                     alt="アーム付きオフィスチェア">
+                                </div>
+                              
                                 <div class="card-body">
                                     <h5 class="card-title">アーム付きオフィスチェア</h5>
                                     <!-- <p class="card-text">商品説明テキストです。</p> -->
@@ -179,7 +188,10 @@
                     <div class="col-6 col-lg-3">
                         <a href="products.html">
                             <div class="card product-card">
-                                <img src="images/ProductsImg/02_livingchair.png" class="card-img-top" alt="リビングチェア">
+                                <div class="zoom-img">
+                                    <img src="images/ProductsImg/02_livingchair.png" class="card-img-top" alt="リビングチェア">
+                                </div>
+
                                 <div class="card-body">
                                     <h5 class="card-title">リビングチェア</h5>
                                 </div>
@@ -191,7 +203,10 @@
                     <div class="col-6 col-lg-3">
                         <a href="products.html">
                             <div class="card product-card">
-                                <img src="images/ProductsImg/03_woodchair.png" class="card-img-top" alt="ウッドチェア">
+                                <div class="zoom-img">
+                                    <img src="images/ProductsImg/03_woodchair.png" class="card-img-top" alt="ウッドチェア">
+                                </div>
+
                                 <div class="card-body">
                                     <h5 class="card-title">ウッドチェア</h5>
                                 </div>
@@ -203,7 +218,10 @@
                     <div class="col-6 col-lg-3">
                         <a href="products.html">
                             <div class="card product-card">
-                                <img src="images/ProductsImg/04_lowchair.png" class="card-img-top" alt="ローチェア">
+                                <div class="zoom-img">
+                                    <img src="images/ProductsImg/04_lowchair.png" class="card-img-top" alt="ローチェア">
+                                </div>
+
                                 <div class="card-body">
                                     <h5 class="card-title">ローチェア</h5>
                                 </div>
@@ -218,8 +236,8 @@
             </div>
 
         </div>
-        <div id="Products">
 
+        <div id="Products" class="div-space div-products">
             <div class="container">
                 <h1 class="fontmenlo-h">Products</h1>
                 <!-- 上段のレイアウト -->
@@ -292,7 +310,7 @@
 
         </div>
 
-        <div id="Access">
+        <div id="Access" class="div-space">
             <div class="container">
                 <h1 class="fontmenlo-h">Access</h1>
                 <!-- <iframe width="992" height="400" allowfullscreen style="border-style:none;" src="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=https://pannellum.org/images/alma.jpg"></iframe> -->
@@ -304,7 +322,7 @@
                         <div>
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2756.073468299795!2d134.83622126770163!3d34.76712389523932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3554d81186f00bfd%3A0x24158f49085b9986!2z44CSNjc1LTAwNjYg5YW15bqr55yM5Yqg5Y-k5bed5biC5Yqg5Y-k5bed55S65a-65a6255S677yU77yX4oiS77yRIOODleOCoeODvOODn-ODs-OCpOODs-ODhuODquOCuOOCp-ODs-ODiOODk-ODqw!5e0!3m2!1sja!2sjp!4v1747716140800!5m2!1sja!2sjp"
-                                width="550" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
@@ -372,11 +390,10 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                     <div class="social-links">
-                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <!-- <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a> -->
+                        <a href="https://www.instagram.com/" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
@@ -387,7 +404,7 @@
             <div class="container">
                 <div class="row py-4">
                     <div class="col-md-6 text-center text-md-start">
-                        <p>&copy; 2025 Chairs. All rights reserved.</p>
+                        <p>&copy; 2025 Chairs.</p>
                     </div>
                 </div>
             </div>
@@ -416,6 +433,32 @@
             lastScrollTop = scrollTop;
         });
     </script>
+    <!-- ヒーロー画像切り替え&拡大スクリプト -->
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let current = 0;
+        const interval = 4000; // 8秒ごとに切り替え →デフォルト8to4
+
+        function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+        });
+        slides[index].classList.add('active');
+        }
+
+        function nextSlide() {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+        }
+
+        // 最初のスライドを表示
+        showSlide(current);
+
+        // 一定時間で切り替え
+        setInterval(nextSlide, interval);
+    </script>
+
+    <!-- BootstrapのJavaScriptファイル -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
 

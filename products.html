@@ -1,12 +1,311 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>プロダクトページ(仮)</title>
+    <title>Chairs | 商品一覧</title>
+
+    <!-- Webフォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="http://fonts.googleapis.com/earlyaccess/notosansjp.css"> <!--Noto Sans JP-->
+    <link href="https://fonts.cdnfonts.com/css/menlo" rel="stylesheet">
+
+    <!-- Bootstrap CSS and JS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <!-- Pannellum CDN -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+
+    <!-- Tailwind CSSを読み込みます -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
+
+    <!-- Bootstrapのアイコン -->
+    <!-- X のアイコンを出すためバージョン1.11.0を指定(1.10.3から変更) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+    <!-- font-awesomeのフォント -->
+    <!-- FBとIGのアイコンを使うため -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <!-- 自前のCSSファイル -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_footer.css">
 </head>
+
 <body>
-    プロダクトページです。
-    
+    <header class="header">
+        <!-- ナビゲーションバー -->
+        <nav class="navbar navbar-expand-md navbar-light bg-light navbar-semi" nav id="navbar">
+            <div class="container-fluid">
+                <div class="logo">
+                    <a class="navbar-brand" href="index.html">
+                        <!-- ロゴ画像 -->
+                        <img src="images/chairs_logo.svg" alt="Chairsのサイトロゴ">
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Chairs</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 fontmenlo">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html"> Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html#Information">
+                                    Information</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="products.html"> Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html#Access"> Access</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="concept.html"> Concept</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="contact.html"> Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+        </nav>
+    </header>
+
+    <main>
+        <div id="Products">
+            <div class="container py-4">
+                <!-- <h1 class="mb-4">商品一覧</h1> -->
+                <h1 class="mb-4 fontmenlo-h">Products</h1>
+                <div class="row g-4">
+                <div class="col-6 col-sm-6 col-lg-3"> <!-- <div class="col-12 col-sm-6 col-lg-3">から1列表示なし -->
+                    <div class="product-card">
+                        <a rel="ar" href="images/officemodel.usdz">
+                            <img src="images/ProductsImg/01_armofficechair.png" alt="アーム付きオフィスチェア">
+                        </a>
+                        <div class="product-title">アーム付きオフィスチェア</div>
+                        <div class="product-desc">商品の説明文です。</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-lg-3">
+                    <div class="product-card">
+                    <img src="images/ProductsImg/02_livingchair.png" alt="リビングチェア">
+                    <div class="product-title">リビングチェア</div>
+                    <div class="product-desc">商品の説明文です。</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-lg-3">
+                    <div class="product-card">
+                    <img src="images/ProductsImg/03_woodchair.png" alt="ウッドチェア">
+                    <div class="product-title">ウッドチェア</div>
+                    <div class="product-desc">商品の説明文です。</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-lg-3">
+                    <div class="product-card">
+                    <img src="images/ProductsImg/04_lowchair.png" alt="ローチェア">
+                    <div class="product-title">ローチェア</div>
+                    <div class="product-desc">商品の説明文です。</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-6 col-lg-3">
+                    <div class="product-card">
+                    <img src="images/ProductsImg/05_fabriclowchair.png" alt="ファブリックローチェア">
+                    <div class="product-title">ファブリックローチェア</div>
+                    <div class="product-desc">商品の説明文です。</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-lg-3">
+                    <div class="product-card">
+                    <img src="images/ProductsImg/06_tuftedleatherchair.png" alt="タフテッドレザーチェア">
+                    <div class="product-title">タフテッドレザーチェア</div>
+                    <div class="product-desc">商品の説明文です。</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-lg-3">
+                    <div class="product-card">
+                    <img src="images/ProductsImg/07_shellfabricchair.png" alt="シェル型ファブリックチェア">
+                    <div class="product-title">シェル型ファブリックチェア</div>
+                    <div class="product-desc">商品の説明文です。</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-lg-3">
+                    <div class="product-card">
+                    <img src="images/ProductsImg/08_lowchair(classicleather).png" alt="ローチェア(クラシックレザー)">
+                    <div class="product-title">ローチェア(クラシックレザー)</div>
+                    <div class="product-desc">商品の説明文です。</div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-6 col-lg-3">
+                    <div class="product-card">
+                    <img src="images/ProductsImg/09_polycarbonate-fakeleatherchair.png" alt="ポリカーボネート&フェイクレザーチェア">
+                    <div class="product-title">ポリカーボネート&フェイクレザーチェア</div>
+                    <div class="product-desc">商品の説明文です。</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-lg-3">
+                    <div class="product-card">
+                    <img src="images/ProductsImg/10_wood-fablicchair.png" alt="ウッド&ファブリックチェア">
+                    <div class="product-title">ウッド&ファブリックチェア</div>
+                    <div class="product-desc">商品の説明文です。</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-lg-3">
+                    <div class="product-card">
+                    <img src="images/ProductsImg/11_livingchair.png" alt="リビングソファ">
+                    <div class="product-title">リビングソファ</div>
+                    <div class="product-desc">商品の説明文です。</div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-lg-3">
+                    <div class="product-card">
+                    <img src="images/ProductsImg/12_singlefablicchair.png" alt="一人掛けファブリックソファ">
+                    <div class="product-title">一人掛けファブリックソファ</div>
+                    <div class="product-desc">商品の説明文です。</div>
+                    </div>
+                </div>
+                <!-- 必要なだけ繰り返し追加 -->
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+    <footer class="modern-footer pt-5">
+        <div class="container footer-content">
+            <div class="row g-4 mb-5">
+                <!-- Company Info -->
+                <div class="col-lg-6 col-md-6">
+                    <a href="index.html" class="footer-logo d-block mb-4">
+                        <img src="images/chairs_logo.svg" alt="Chairsのサイトロゴ" width="200px" height="auto">
+                    </a>
+
+                    <!-- <p class="text-muted mb-4">Empowering businesses with innovative digital solutions. We create
+                        meaningful experiences that drive success.</p> -->
+                    <ul class="contact-info mb-4">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>〒675-0066<br>兵庫県加古川市加古川町<br>寺家町47-1 ファーミンインテリジェントビル5F<br></span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>078-XXX-XXXX</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>chair-XXXX@testmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-6 col-md-6">
+                    <h3 class="footer-title fontmenlo">Quick Links</h3>
+                    <ul class="quick-links">
+                        <li><a href="index.html#">Home</a></li>
+                        <li><a href="index.html#Information">Information</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="index.html#Access">Access</a></li>
+                        <li><a href="concept.html">Concept</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <!-- <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a> -->
+                        <a href="https://www.instagram.com/" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row py-4">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p>&copy; 2025 Chairs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- スクロール検出スクリプト -->
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+        const navbarHeight = navbar.offsetHeight;
+
+        window.addEventListener('scroll', function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // スクロールダウン → 非表示
+                // navbar.style.top = "-80px";
+                // スクロールダウン → 高さ分だけ上に移動
+                navbar.style.top = `-${navbarHeight}px`;
+            } else {
+                // スクロールアップ → 表示
+                navbar.style.top = "0";
+            }
+
+            lastScrollTop = scrollTop;
+        });
+    </script>
+    <!-- ヒーロー画像切り替え&拡大スクリプト -->
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        let current = 0;
+        const interval = 4000; // 8秒ごとに切り替え →デフォルト8to4
+
+        function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+        });
+        slides[index].classList.add('active');
+        }
+
+        function nextSlide() {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+        }
+
+        // 最初のスライドを表示
+        showSlide(current);
+
+        // 一定時間で切り替え
+        setInterval(nextSlide, interval);
+    </script>
+
+    <!-- BootstrapのJavaScriptファイル -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+
 </body>
+
 </html>
