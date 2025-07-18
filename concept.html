@@ -1,12 +1,225 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>コンセプトページ(仮)</title>
+    <title>Chairs | コンセプト</title>
+
+    <!-- Webフォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="http://fonts.googleapis.com/earlyaccess/notosansjp.css"> <!--Noto Sans JP-->
+    <link href="https://fonts.cdnfonts.com/css/menlo" rel="stylesheet">
+
+    <!-- san serief -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS and JS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <!-- Pannellum CDN -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+
+    <!-- Tailwind CSSを読み込みます -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
+
+    <!-- Bootstrapのアイコン -->
+    <!-- X のアイコンを出すためバージョン1.11.0を指定(1.10.3から変更) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+    <!-- font-awesomeのフォント -->
+    <!-- FBとIGのアイコンを使うため -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <!-- 自前のCSSファイル -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_footer.css">
 </head>
+
 <body>
-    コンセプトページです。
+    <header class="header">
+        <!-- ナビゲーションバー -->
+        <nav class="navbar navbar-expand-md navbar-light bg-light navbar-semi" nav id="navbar">
+            <div class="container-fluid">
+                <div class="logo">
+                    <a class="navbar-brand" href="index.html">
+                        <!-- ロゴ画像 -->
+                        <img src="images/chairs_logo.svg" alt="Chairsのサイトロゴ">
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Chairs</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 fontmenlo">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html"> Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html#Information">
+                                    Information</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="products.html"> Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html#Access"> Access</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="concept.html"> Concept</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="contact.html"> Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+        </nav>
+    </header>
+
+    <main>
+        <div id="Concept" class="div-space">
+            <div class="container">
+                <h1 class="fontmenlo-h">Concept</h1>
+                    <div class="container">
+                        <!-- 2カラムレイアウト -->
+                        <div class="row align-items-start">
+                        <!-- 左側：画像 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="image-box">
+                                <img src="images/concept_image.jpg" alt="コンセプト画像" class="img-fluid">
+                            </div>
+                        </div>
+
+                        <!-- 右側：見出し＋本文 -->
+                        <div class="col-md-6">
+                            <h1 class="heading-box fontnotoserie">あなたに合った椅子がきっと見つかる</h1>
+                            <div class="text-box">Chairsは、椅子の専門店です。
+                                私たちは、あなたのライフスタイルに合った椅子を提供することを目指しています。
+                                椅子はただの家具ではなく、あなたの生活を豊かにするパートナーです。
+                                そのため、私たちはデザイン性と機能性を兼ね備えた椅子を厳選し、取り揃えています。
+                                あなたの毎日を支える椅子を、ぜひ見つけてください。
+                            </div>
+                        </div>
+                        </div>
+
+                        <!-- 戻るボタン -->
+                        <!-- view more ボタン -->
+                        <div class="text-center">
+                            <a href="index.html" class="btn btn-flat fontmenlo"><span>Go Index</span></a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+    </main>
+    <footer class="modern-footer pt-5">
+        <div class="container footer-content">
+            <div class="row g-4 mb-5">
+                <!-- Company Info -->
+                <div class="col-lg-6 col-md-6">
+                    <a href="index.html" class="footer-logo d-block mb-4">
+                        <img src="images/chairs_logo.svg" alt="Chairsのサイトロゴ" width="200px" height="auto">
+                    </a>
+
+                    <!-- <p class="text-muted mb-4">Empowering businesses with innovative digital solutions. We create
+                        meaningful experiences that drive success.</p> -->
+                    <ul class="contact-info mb-4">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>〒675-0066<br>兵庫県加古川市加古川町<br>寺家町47-1 ファーミンインテリジェントビル5F<br></span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>078-XXX-XXXX</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>chair-XXXX@testmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-6 col-md-6">
+                    <h3 class="footer-title fontmenlo">Quick Links</h3>
+                    <ul class="quick-links">
+                        <li><a href="index.html#">Home</a></li>
+                        <li><a href="index.html#Information">Information</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="index.html#Access">Access</a></li>
+                        <li><a href="concept.html">Concept</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <!-- <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a> -->
+                        <a href="https://www.instagram.com/" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row py-4">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p>&copy; 2025 Chairs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- スクロール検出スクリプト -->
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+        const navbarHeight = navbar.offsetHeight;
+
+        window.addEventListener('scroll', function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // スクロールダウン → 非表示
+                // navbar.style.top = "-80px";
+                // スクロールダウン → 高さ分だけ上に移動
+                navbar.style.top = `-${navbarHeight}px`;
+            } else {
+                // スクロールアップ → 表示
+                navbar.style.top = "0";
+            }
+
+            lastScrollTop = scrollTop;
+        });
+    </script>
     
+    <!-- BootstrapのJavaScriptファイル -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+
 </body>
+
 </html>
