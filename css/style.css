@@ -317,3 +317,23 @@ a.btn-flat:hover:before {
         margin-top: 0;
     }
 }
+
+/* Productsページの画像切り替え */
+.switch_image {
+    position: relative;
+}
+.switch_image img {
+    transition: opacity 0.5s;
+}
+.switch_image:hover img:first-of-type {
+    opacity: 0;
+}
+.switch_image img:last-of-type {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+}
+.switch_image:hover img:last-of-type {
+    opacity: 1;
+}
