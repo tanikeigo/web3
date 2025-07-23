@@ -107,27 +107,27 @@
                                     <p>Chairs へのお問い合わせは、以下のフォームからご連絡ください。<br>
                                     ご質問やご意見、製品に関するお問い合わせなど、どんな内容でもお気軽にどうぞ。<br>
                                     なお、内容によってはお返事できない場合がございますので、あらかじめご了承ください。</p>
-                                    <form method="post" action="mail.php">
+                                    <form method="post" action="https://formspree.io/f/xnnzpzwk">  <!--  send.phpから差し替え -->
                                         <div class="mb-3">
-                                            <input type="text" class="form-control" name="お名前" placeholder="名前（必須）" value="">
+                                            <input type="text" class="form-control" name="name" placeholder="名前" value="">
                                         </div>
                                         <!-- <div class="mb-3">
                                             <input type="text" class="form-control" name="住所" placeholder="住所" value="">
                                         </div> -->
                                         <div class="mb-3">
-                                            <input type="text" class="form-control" name="Email" placeholder="メールアドレス（必須）" value="" required>
+                                            <input type="text" class="form-control" name="email" placeholder="メールアドレス（必須）" value="" required>
                                         </div>
                                         <div class="mb-4">
-                                            <textarea class="form-control" name="お問い合わせ内容" rows="5" placeholder="メッセージを入力してください"></textarea>
+                                            <textarea class="form-control" name="message" rows="5" placeholder="メッセージを入力してください" required></textarea>
                                         </div>
                                         <div class="form-check mb-4">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" required>
                                             <label class="form-check-label" for="flexCheckIndeterminate">
                                             利用規約に同意します。<a href="" target="_blank" rel="noopener noreferrer" class="text-decoration-underline text-dark">プライバシーポリシーはこちら</a>
                                             </label>
                                         </div>
                                         <div class="text-center pt-4 col-md-6 offset-md-3">
-                                            <button type="submit" class="btn btn-primary">送信</button>
+                                            <button type="submit" class="btn btn-primary" value="送信">送信</button>
                                         </div>
                                     </form>
                                 </div>
