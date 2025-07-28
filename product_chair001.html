@@ -3,10 +3,661 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>商品個別ページ(仮)</title>
+    <title>Chairs | アーム付きオフィスチェア</title>
+
+    <!-- Webフォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="http://fonts.googleapis.com/earlyaccess/notosansjp.css"> <!--Noto Sans JP-->
+    <link href="https://fonts.cdnfonts.com/css/menlo" rel="stylesheet">
+
+    <!-- Bootstrap CSS and JS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <!-- Pannellum CDN -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+
+    <!-- Bootstrapのアイコン -->
+    <!-- X のアイコンを出すためバージョン1.11.0を指定(1.10.3から変更) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+    <!-- font-awesomeのフォント -->
+    <!-- FBとIGのアイコンを使うため -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <!-- 自前のCSSファイル -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_footer.css">
+    <link rel="stylesheet" href="css/style_product.css">
 </head>
 <body>
-    商品個別ページです。
+    <header class="header">
+        <!-- ナビゲーションバー -->
+        <nav class="navbar navbar-expand-md navbar-light bg-light navbar-semi" nav id="navbar">
+            <div class="container-fluid">
+                <div class="logo">
+                    <a class="navbar-brand" href="index.html">
+                        <!-- ロゴ画像 -->
+                        <img src="images/chairs_logo.svg" alt="Chairsのサイトロゴ">
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Chairs</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 fontmenlo">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html"> Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html#Information">
+                                    Information</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="products.html"> Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html#Access"> Access</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="concept.html"> Concept</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="contact.html"> Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+        <div id="Product" class="div-space">
+            <div class="container">
+                <!-- <h1 class="fontmenlo-h">商品個別ページ(仮)</h1> -->
+                 <div class="div-space-product"></div>
+                    <div class="container">
+                        <!-- 2カラムレイアウト -->
+                        <div class="row align-items-start">
+                            <!-- 左側：画像 -->
+                            <div class="col-md-6 mb-4">
+                                <!-- <div class="image-box">
+                                    <a rel="ar" href="images/officemodel.usdz">
+                                        <img src="images/ProductsImg/01_armofficechair.webp" alt="アーム付きオフィスチェア">
+                                    </a>
+                                </div> -->
+                                <!-- 画像ギャラリー テスト -->
+                                <div class="image-gallery">
+                                    <div class="main-image-container">
+                                        <img src="images/ProductsImg/01_armofficechair.webp" 
+                                            alt="KURA CHAIR メインビュー" 
+                                            class="main-image" 
+                                            id="mainImage"
+                                            onclick="openModal(this.src)">
+                                        <div class="image-counter">
+                                            <span id="currentImage">1</span> / 3
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="thumbnail-container">
+                                        <img src="images/ProductsImg/01_armofficechair.webp" 
+                                            alt="KURA CHAIR ビュー1" 
+                                            class="thumbnail active"
+                                            data-index="0"
+                                            data-main-src="images/ProductsImg/01_armofficechair.webp"
+                                            onclick="changeMainImage(this)">
+                                        
+                                        <img src="images/ProductsImg/01_armofficechair_B.webp" 
+                                            alt="KURA CHAIR ビュー2" 
+                                            class="thumbnail"
+                                            data-index="1"
+                                            data-main-src="images/ProductsImg/01_armofficechair_B.webp"
+                                            onclick="changeMainImage(this)">
+                                        
+                                        <img src="images/ProductsImg/204_Products.webp" 
+                                            alt="KURA CHAIR ビュー3" 
+                                            class="thumbnail"
+                                            data-index="2"
+                                            data-main-src="images/ProductsImg/204_Products.webp"
+                                            onclick="changeMainImage(this)">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 右側：見出し＋本文 -->
+                            <div class="col-md-6">
+                                <h2 class="heading-box fontnotoserie">アーム付きオフィスチェア</h2>
+                                <p class="subheading-box">商品番号：chair001</p>
+                                <p class="price-box">価格：￥60,000（税込）</p>
+                                <p class="stock-box">在庫：あり</p>
+                                <div class="text-box concept-text"><p>このオフィスチェアは、快適な座り心地とスタイリッシュなデザインを兼ね備えています。アームレスト付きで、長時間の作業でも疲れにくい設計です。</p>
+                                </div>  
+                                <!-- <p class="description-box">このオフィスチェアは、快適な座り心地とスタイリッシュなデザインを兼ね備えています。アームレスト付きで、長時間の作業でも疲れにくい設計です。</p> -->
+                                <p class="note-box">
+                                    <strong>※注意事項：</strong>こちらの商品は椅子本体のみの販売です。
+                                </p>
+                                <p>
+                                    <a rel="ar" href="images/officemodel.usdz">
+                                        ARで見る(iOS端末のみ対応)
+                                    </a>
+                                </p>
+                                <!-- カートに入れる ボタン -->
+                                <div class="text-center">
+                                    <button class="btn btn-flat fontmenlo" onclick="addToCart()"><span>add to cart</span></button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="container mt-5">    <!-- サンプルからmt-5追記 -->
+            <div class="product-detail">
+                <!-- <div class="product-header">
+                    <h1 class="product-title">OFFICE CHAIR</h1>
+                    <p class="product-subtitle">アーム付きオフィスチェア</p>
+                </div> -->
+
+                <nav class="tab-navigation">
+                    <button class="tab-button active" data-tab="description">商品説明</button>
+                    <button class="tab-button" data-tab="specifications">仕様・サイズ</button>
+                    <button class="tab-button" data-tab="delivery">配送・決済</button>
+                </nav>
+
+                <div class="tab-content active" id="description">
+                    <div class="content-section">
+                        <h3>商品について</h3>
+                        <p>丸くかわいい形状やざっくりとしたさじの上に、有機的で織り上品なカラ子です。本を読んだり、テレビを見たり、体をゆっくりしぐくつろぎたい時間に、シーンごとの人のあかりの純粋な意味で対話して機でき上下サポートしてくれるクッションです。</p>
+                        <p>こちらの商品はカバーのみの販売です。</p>
+                        <p>本体・本体ヌデは別売りです。</p>
+                        <p><strong>MINI PUUF (Body)のページはこちら</strong></p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>特徴</h3>
+                        <ul class="feature-list">
+                            <li>コンパクトなサイズで場所を取らない</li>
+                            <li>高品質な素材を使用</li>
+                            <li>様々なインテリアにマッチするデザイン</li>
+                            <li>お手入れが簡単</li>
+                            <li>軽量で持ち運びやすい</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="specifications">
+                    <div class="content-section">
+                        <h3>製品仕様</h3>
+                        <table class="spec-table">
+                            <tbody>
+                                <tr>
+                                    <th>サイズ</th>
+                                    <td>幅40cm × 奥行40cm × 高さ35cm</td>
+                                </tr>
+                                <tr>
+                                    <th>重量</th>
+                                    <td>約2.5kg</td>
+                                </tr>
+                                <tr>
+                                    <th>素材</th>
+                                    <td>カバー：コットン100%<br>中材：ウレタンフォーム</td>
+                                </tr>
+                                <tr>
+                                    <th>耐荷重</th>
+                                    <td>約80kg</td>
+                                </tr>
+                                <tr>
+                                    <th>カラー</th>
+                                    <td>ベージュ、グレー、ネイビー</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>ダウンロード資料</h3>
+                        <a href="#" class="download-link">📋 商品説明書 (PDF・0.3MB)</a>
+                        <a href="#" class="download-link">📋 組立説明書 (PDF・0.1MB)</a>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="delivery">
+                    <div class="content-section">
+                        <h3>配送について</h3>
+                        <table class="spec-table">
+                            <tbody>
+                                <tr>
+                                    <th>配送料金</th>
+                                    <td>全国一律 800円<br>※10,000円以上お買い上げで送料無料</td>
+                                </tr>
+                                <tr>
+                                    <th>配送日数</th>
+                                    <td>ご注文確定後、3-5営業日以内に発送</td>
+                                </tr>
+                                <tr>
+                                    <th>配送業者</th>
+                                    <td>ヤマト運輸・佐川急便</td>
+                                </tr>
+                                <tr>
+                                    <th>配送時間</th>
+                                    <td>午前中、14-16時、16-18時、18-20時、19-21時</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>お支払い方法</h3>
+                        <ul class="feature-list">
+                            <li>クレジットカード（VISA、MasterCard、JCB、AMEX）</li>
+                            <li>銀行振込（前払い）</li>
+                            <li>代金引換（手数料330円）</li>
+                            <li>Amazon Pay</li>
+                            <li>PayPay</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>返品・交換について</h3>
+                        <p>商品到着後7日以内であれば、未使用・未開封の商品に限り返品・交換を承ります。お客様都合による返品の場合、送料はお客様負担となります。</p>
+                        <p>不良品や配送中の破損の場合は、送料弊社負担で交換いたします。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <div class="related-products-section">
+                <h3>一緒に購入されている商品</h3>
+                
+                <div class="products-container">
+                    <button class="scroll-button prev" onclick="scrollProducts(-1)">‹</button>
+                    <button class="scroll-button next" onclick="scrollProducts(1)">›</button>
+                    
+                    <div class="products-scroll" id="productsScroll">
+                        <div class="product-card" onclick="selectProduct(1)">
+                            <div class="product-image"><img src="images/ProductsImg/02_livingchair.webp" alt="リビングチェア"></div>
+                            <div class="product-info">
+                                <div class="product-name">リビングチェア</div>
+                                <!-- <div class="product-price">¥12,900</div>
+                                <div class="product-description">天然木の温かみを感じる、シンプルで美しいデザインのチェア</div> -->
+                            </div>
+                        </div>
+
+                        <div class="product-card" onclick="selectProduct(2)">
+                            <div class="product-image"><img src="images/ProductsImg/03_woodchair.webp" alt="ウッドチェア"></div>
+                            <div class="product-info">
+                                <div class="product-name">ウッドチェア</div>
+                                <!-- <div class="product-price">¥49,900</div>
+                                <div class="product-description">リビングにぴったりのコンパクトサイズソファ</div> -->
+                            </div>
+                        </div>
+
+                        <div class="product-card" onclick="selectProduct(3)">
+                            <!-- <div class="product-image">🪞</div> -->
+                            <div class="product-image"><img src="images/ProductsImg/04_lowchair.webp" alt="ローチェア"></div>
+                            <div class="product-info">
+                                <div class="product-name">ローチェア</div>
+                                <!-- <div class="product-price">¥3,990</div>
+                                <div class="product-description">シンプルな円形の壁掛けミラー、どんなお部屋にも馴染みます</div> -->
+                            </div>
+                        </div>
+
+                        <div class="product-card" onclick="selectProduct(4)">
+                            <div class="product-image"><img src="images/ProductsImg/05_fabriclowchair.webp" alt="ファブリックローチェア"></div>
+                            <div class="product-info">
+                                <div class="product-name">ファブリックローチェア</div>
+                                <!-- <div class="product-price">¥7,990</div>
+                                <div class="product-description">調光機能付きのスタイリッシュなデスクライト</div> -->
+                            </div>
+                        </div>
+
+                        <div class="product-card" onclick="selectProduct(5)">
+                            <div class="product-image"><img src="images/ProductsImg/06_tuftedleatherchair.webp" alt="タフテッドレザーチェア"></div>
+                            <div class="product-info">
+                                <div class="product-name">タフテッドレザーチェア</div>
+                                <!-- <div class="product-price">¥19,900</div>
+                                <div class="product-description">天然木を使用した温かみのある本棚、3段タイプ</div> -->
+                            </div>
+                        </div>
+
+                        <div class="product-card" onclick="selectProduct(6)">
+                            <div class="product-image"><img src="images/ProductsImg/07_shellfabricchair.webp" alt="シェル型ファブリックチェア"></div>
+                            <div class="product-info">
+                                <div class="product-name">シェル型ファブリックチェア</div>
+                                <!-- <div class="product-price">¥8,990</div>
+                                <div class="product-description">体にフィットする極小ビーズのクッション</div> -->
+                            </div>
+                        </div>
+
+                        <div class="product-card" onclick="selectProduct(7)">
+                            <div class="product-image"><img src="images/ProductsImg/08_lowchair(classicleather).webp" alt="ローチェア(クラシックレザー)"></div>
+                            <div class="product-info">
+                                <div class="product-name">ローチェア(クラシックレザー)</div>
+                                <!-- <div class="product-price">¥4,990</div>
+                                <div class="product-description">お手入れ簡単な室内観葉植物、空気清浄効果も</div> -->
+                            </div>
+                        </div>
+
+                        <div class="product-card" onclick="selectProduct(8)">
+                            <div class="product-image"><img src="images/ProductsImg/09_polycarbonate-fakeleatherchair.webp" alt="ポリカーボネート&フェイクレザーチェア"></div>
+                            <div class="product-info">
+                                <div class="product-name">ポリカーボネート&フェイクレザーチェア</div>
+                                <!-- <div class="product-price">¥2,490</div>
+                                <div class="product-description">リラックス効果の高い天然アロマキャンドル3本セット</div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 画像拡大モーダル -->
+        <div id="imageModal" class="modal" onclick="closeModal()">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <img class="modal-image" id="modalImage" alt="拡大画像">
+            </div>
+        </div>
+        
+    </main>
+
+    <footer class="modern-footer pt-5">
+        <div class="container footer-content">
+            <div class="row g-4 mb-5">
+                <!-- Company Info -->
+                <div class="col-lg-6 col-md-6">
+                    <a href="index.html" class="footer-logo d-block mb-4">
+                        <img src="images/chairs_logo.svg" alt="Chairsのサイトロゴ" width="200px" height="auto">
+                    </a>
+
+                    <!-- <p class="text-muted mb-4">Empowering businesses with innovative digital solutions. We create
+                        meaningful experiences that drive success.</p> -->
+                    <ul class="contact-info mb-4">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>〒675-0066<br>兵庫県加古川市加古川町<br>寺家町47-1 ファーミンインテリジェントビル5F<br></span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>078-XXX-XXXX</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>chair-XXXX@testmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-6 col-md-6">
+                    <h3 class="footer-title fontmenlo">Quick Links</h3>
+                    <ul class="quick-links">
+                        <li><a href="index.html#">Home</a></li>
+                        <li><a href="index.html#Information">Information</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="index.html#Access">Access</a></li>
+                        <li><a href="concept.html">Concept</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                        <!-- <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a> -->
+                        <a href="https://www.instagram.com/" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row py-4">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p>&copy; 2025 Chairs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script>
+        // タブ切り替え機能
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetTab = this.getAttribute('data-tab');
+
+                    // すべてのタブボタンからactiveクラスを削除
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    // クリックされたタブボタンにactiveクラスを追加
+                    this.classList.add('active');
+
+                    // すべてのタブコンテンツを非表示
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    // 対象のタブコンテンツを表示
+                    const targetContent = document.getElementById(targetTab);
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                    }
+                });
+            });
+        });
+
+        // ダウンロードリンクのクリックイベント（デモ用）
+        document.querySelectorAll('.download-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('ダウンロード機能のデモです。実際の実装では、ファイルのダウンロード処理を行います。');
+            });
+        });
+        
+        // スクロール検出スクリプト
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+        const navbarHeight = navbar.offsetHeight;
+
+        window.addEventListener('scroll', function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // スクロールダウン → 非表示
+                // navbar.style.top = "-80px";
+                // スクロールダウン → 高さ分だけ上に移動
+                navbar.style.top = `-${navbarHeight}px`;
+            } else {
+                // スクロールアップ → 表示
+                navbar.style.top = "0";
+            }
+
+            lastScrollTop = scrollTop;
+        });
+
+        // 以下商品カードのスクロール機能のためのJavaScript
+        const productsScroll = document.getElementById('productsScroll');
+        const indicators = document.querySelectorAll('.indicator');
+        let currentPosition = 0;
+        const cardWidth = 240; // カード幅 + gap
+
+        // スクロールボタンの機能
+        function scrollProducts(direction) {
+            const maxScroll = productsScroll.scrollWidth - productsScroll.clientWidth;
+            const scrollAmount = cardWidth * 1.5; // 2枚分スクロール→1.5に調整
+            
+            if (direction === 1) {
+                productsScroll.scrollLeft = Math.min(productsScroll.scrollLeft + scrollAmount, maxScroll);
+            } else {
+                productsScroll.scrollLeft = Math.max(productsScroll.scrollLeft - scrollAmount, 0);
+            }
+        }
+
+        // 商品選択
+        function selectProduct(productId) {
+            alert(`商品 ${productId} が選択されました。\n実際の実装では商品詳細ページに遷移します。`);
+        }
+
+        // タッチスワイプ対応
+        let startX = 0;
+        let scrollLeft = 0;
+
+        productsScroll.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].pageX - productsScroll.offsetLeft;
+            scrollLeft = productsScroll.scrollLeft;
+        });
+
+        productsScroll.addEventListener('touchmove', (e) => {
+            if (!startX) return;
+            e.preventDefault();
+            const x = e.touches[0].pageX - productsScroll.offsetLeft;
+            const walk = (x - startX) * 2;
+            productsScroll.scrollLeft = scrollLeft - walk;
+        });
+
+        productsScroll.addEventListener('touchend', () => {
+            startX = 0;
+        });
+
+        // マウスドラッグ対応
+        let isDown = false;
+
+        productsScroll.addEventListener('mousedown', (e) => {
+            isDown = true;
+            productsScroll.style.cursor = 'grabbing';
+            startX = e.pageX - productsScroll.offsetLeft;
+            scrollLeft = productsScroll.scrollLeft;
+        });
+
+        productsScroll.addEventListener('mouseleave', () => {
+            isDown = false;
+            productsScroll.style.cursor = 'grab';
+        });
+
+        productsScroll.addEventListener('mouseup', () => {
+            isDown = false;
+            productsScroll.style.cursor = 'grab';
+        });
+
+        productsScroll.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - productsScroll.offsetLeft;
+            const walk = (x - startX) * 2;
+            productsScroll.scrollLeft = scrollLeft - walk;
+        });
+
+        // 初期設定
+        productsScroll.style.cursor = 'grab';
+        //商品カードのスクロール機能のためのJavaScript 終わり
+
+        // 商品画像スライドショーとカートに追加アクション 開始
+        // サムネイル画像をクリックしたときの処理
+        function changeMainImage(thumbnail) {
+            const mainImage = document.getElementById('mainImage');
+            const currentImageSpan = document.getElementById('currentImage');
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            
+            // メイン画像を変更
+            const newSrc = thumbnail.getAttribute('data-main-src');
+            const imageIndex = parseInt(thumbnail.getAttribute('data-index'));
+            
+            // フェードアウト → 画像変更 → フェードイン
+            mainImage.style.opacity = '0';
+            
+            setTimeout(() => {
+                mainImage.src = newSrc;
+                mainImage.alt = thumbnail.alt;
+                currentImageSpan.textContent = imageIndex + 1;
+                mainImage.style.opacity = '1';
+            }, 150);
+            
+            // サムネイルのアクティブ状態を更新
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            thumbnail.classList.add('active');
+        }
+
+        // 画像拡大モーダルを開く
+        function openModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            
+            modalImage.src = imageSrc;
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // スクロール無効化
+        }
+
+        // 画像拡大モーダルを閉じる
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // スクロール有効化
+        }
+
+        // カートに追加の処理
+        function addToCart() {
+            alert('商品をカートに追加しました！\n実際の実装では、カート機能と連携します。');
+        }
+
+        // キーボードでモーダルを閉じる
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // サムネイル画像のキーボード操作
+        document.addEventListener('keydown', function(event) {
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            const activeThumbnail = document.querySelector('.thumbnail.active');
+            const currentIndex = Array.from(thumbnails).indexOf(activeThumbnail);
+            
+            if (event.key === 'ArrowLeft' && currentIndex > 0) {
+                changeMainImage(thumbnails[currentIndex - 1]);
+            } else if (event.key === 'ArrowRight' && currentIndex < thumbnails.length - 1) {
+                changeMainImage(thumbnails[currentIndex + 1]);
+            }
+        });
+
+        // 画像の読み込み完了を待つ
+        document.addEventListener('DOMContentLoaded', function() {
+            const mainImage = document.getElementById('mainImage');
+            mainImage.addEventListener('load', function() {
+                this.style.opacity = '1';
+            });
+        });
+        // 商品画像スライドショーとカートに追加アクション 終了
+
+    </script>
+
+    <!-- BootstrapのJavaScriptファイル -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     
 </body>
 </html>
