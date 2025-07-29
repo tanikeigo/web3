@@ -28,10 +28,6 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
 
-    <!-- Tailwind CSSを読み込みます -->
-    <!-- <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
-
     <!-- Bootstrapのアイコン -->
     <!-- X のアイコンを出すためバージョン1.11.0を指定(1.10.3から変更) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
@@ -97,7 +93,6 @@
     <main>
         <div id="Products">
             <div class="container py-4">
-                <!-- <h1 class="mb-4">商品一覧</h1> -->
                 <h1 class="mb-4 fontmenlo-h">Products</h1>
                     <div class="row g-4">
                     <div class="col-6 col-sm-6 col-lg-3"> <!-- <div class="col-12 col-sm-6 col-lg-3">から1列表示なし -->
@@ -340,30 +335,6 @@
 
             lastScrollTop = scrollTop;
         });
-    </script>
-    <!-- ヒーロー画像切り替え&拡大スクリプト -->
-    <script>
-        const slides = document.querySelectorAll('.slide');
-        let current = 0;
-        const interval = 4000; // 8秒ごとに切り替え →デフォルト8to4
-
-        function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.classList.remove('active');
-        });
-        slides[index].classList.add('active');
-        }
-
-        function nextSlide() {
-        current = (current + 1) % slides.length;
-        showSlide(current);
-        }
-
-        // 最初のスライドを表示
-        showSlide(current);
-
-        // 一定時間で切り替え
-        setInterval(nextSlide, interval);
     </script>
 
     <!-- BootstrapのJavaScriptファイル -->
