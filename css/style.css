@@ -251,13 +251,64 @@ button.btn.btn-flat:hover {
 .zoom-img:hover::before {
   opacity: 1;
 }
-
 .div-products {
     /* padding: 20px; */
     /* background-color: #f8f9fa; */
     background-color: #c1d2dd;
     /* border-radius: 10px; */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Product写真のマウスホバー時のテキスト表示 */
+/* .item_box * {
+  box-sizing: border-box;
+} */
+/* .item_box {
+  width: 100%;
+  max-width: 250px;
+} */
+.item_link {
+  display: block;
+}
+.item_content {
+  position: relative;
+  overflow: hidden;
+}
+.item_image img {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+.item_mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+}
+.item_mask-text {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  padding: 0.5em;
+  font-size: 1.5em;
+  text-align: center;
+  color: #fff;
+  transform: translateY(-50%);
+}
+.item_text {
+  margin-top: 10px;
+  text-align: center;
+}
+.item_box .item_link:hover .item_mask {
+  opacity: 1;
+}
+/* -fade-in */
+.item_box.-fade-in .item_mask {
+  transition: opacity 1.0s ease;    /* zoom0.6sに余韻を残すため1.0s */
 }
 
 /* インデックスページのスライダ */
