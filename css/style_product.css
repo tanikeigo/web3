@@ -449,6 +449,14 @@ body {
     }
 /* 関連商品横スクロールアクション終わり */
 
+/* AR QuickLook用のアイコン画像サイズ調整 */
+.ARview img {
+    width: 50%;
+    height: auto;
+    max-width: 50px;
+    max-height: 50px;
+}
+
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
     .tab-navigation {
